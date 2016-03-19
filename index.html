@@ -1,69 +1,115 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html>
+    <script>$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+        </script>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Materialize CSS </title>	
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-<link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
-    <section id="home" class="home">
-        <header>
-                <div class="navbar-fixed">
-                    <nav class="menuSite" style="">
-                        <div class="container-fluid">
-                            <a href="#" class="brand-logo logo">John Doe</a>
-                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                            <ul class="right hide-on-med-and-down">
-                                <li><a href="index.html#sobre">QUEM SOU EU</a></li>
-                                <li><a>HABILIDADES</a></li>
-                                <li><a>PORTFÓLIO</a></li>
-                            </ul>
-                            <ul class="side-nav" id="mobile-demo">
-                                <li><a href="index.html#sobre">QUEM SOU EU</a></li>
-                                <li><a>HABILIDADES</a></li>
-                                <li><a>PORTFÓLIO</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-        </header>
+    <meta charset="UTF-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="css/gdg.css" type="text/css" />
 
-        <section class="contentHome">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <title>Portifolio</title>
+
+    <script>
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+
+            $('.parallax').parallax();
+            var telaAlt = $(window).height();
+            // Aplica o tamanho da foto de acordo com a tela
+            $('.home').css('height', telaAlt);
+
+            /*var menuAlt = $('.menuSite').height();
+
+            var contentHomeAlt = telaAlt - menuAlt;
+            $('.contentHome').css('height',contentHomeAlt);*/
+        });
+
+        $(document).ready(function() {
+            $('.ancora').click(function() {
+                var alvo = $(this).attr('href').split('#').pop();
+                $('html, body').animate({
+                    scrollTop: $('#' + alvo).offset().top
+                }, 1000);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper teal darken-3">
+                    <a href="#!" class="brand-logo">Allison</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="index.html#sobre" class="ancora">Quem sou eu</a></li>
+                        <li><a href="index.html#servicos" class="ancora">Oque eu faço</a></li>
+                        <li><a href="index.html#portifolio" class="ancora">Portifolio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <section id="home" class="home" style="height: 800px; background-color: #232323;">
+
+    </section>
+<div class="parallax-container">
+    <div class="parallax"><img src="img/parallax1.jpg"></div>
+  </div>
+
+    <section id="sobre" style="height: 800px;">
+
+    </section>
+
+
+
+
+    <section id="servicos" class="servicos">
+
+    </section>
+
+    <section id="portfolio" class="portfolio">
+
+    </section>
+
+    <footer>
+        <footer class="page-footer teal darken-3">
             <div class="container">
                 <div class="row">
-                    <div class="col s12 m12 l12">
-                        <h2 class="tituloPg1">Olá meu nome é John Doe.Sou um Desenvolvedor Full Stack</h2>
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
-    <section id="sobre" class="sobre">
-        <article>
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <h3 class="tituloSobre">QUEM SOU EU </h3>
-                        <div class="divider"></div>
-                    </div>
+            <div class="footer-copyright teal darken-4">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
-                <div class="row">
-                    <div class="col s12 m6 l6 perfil">
-                        <div class="perfil">
-                            <img class="responsive-img circle" src="img/John_Doe.jpg">
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l6 perfil valign-wrapper">
-                        <p class="paragrafo valign">Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
             </div>
-        </article>
-    </section>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script src="js/script.js"></script>
+        </footer>
+
+    </footer>
 </body>
+
 </html>
